@@ -1,11 +1,13 @@
 This app has been created with [Bati](https://batijs.dev) using the following flags: `--react --tailwindcss --eslint --prettier`
 
 # About this app
+
 This app is ready to start. It's powered by [Vike](https://vike.dev) and [React](https://react.dev/learn).
 
 ### `/pages/+config.ts`
 
 Such `+` files are [the interface](https://vike.dev/config) between Vike and your code. It defines:
+
 - A default [`<Layout>` component](https://vike.dev/Layout) (that wraps your [`<Page>` components](https://vike.dev/Page)).
 - A default [`title`](https://vike.dev/head).
 - Default [`<head>` tags](https://vike.dev/head).
@@ -13,9 +15,10 @@ Such `+` files are [the interface](https://vike.dev/config) between Vike and you
 ### Routing
 
 [Vike's built-in router](https://vike.dev/routing) lets you choose between:
- - [Filesystem Routing](https://vike.dev/filesystem-routing) (the URL of a page is determined based on where its `+Page.jsx` file is located on the filesystem)
- - [Route Strings](https://vike.dev/route-string)
- - [Route Functions](https://vike.dev/route-function)
+
+- [Filesystem Routing](https://vike.dev/filesystem-routing) (the URL of a page is determined based on where its `+Page.jsx` file is located on the filesystem)
+- [Route Strings](https://vike.dev/route-string)
+- [Route Functions](https://vike.dev/route-function)
 
 ### `/pages/_error/+Page.jsx`
 
@@ -32,4 +35,3 @@ SSR is enabled by default. You can [disable it](https://vike.dev/ssr) for all yo
 ### HTML Streaming
 
 You can enable/disable [HTML streaming](https://vike.dev/streaming) for all your pages, or only for some pages while still using it for others.
-

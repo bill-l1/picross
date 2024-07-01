@@ -9,7 +9,7 @@ export default function LayoutDefault({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex max-w-2xl m-auto">
+    <div className="flex m-auto">
       <Content>{children}</Content>
     </div>
   );

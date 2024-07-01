@@ -9,7 +9,7 @@ export default {
   Head,
 
   // <title>
-  title: "My Vike App",
+  title: "Picross",
   stream: true,
   extends: vikeReact,
 } satisfies Config;

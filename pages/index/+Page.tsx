@@ -435,11 +435,6 @@ const Page = () => {
     ? Math.max(puzzle.m, puzzle.n) * 25 + 1000
     : 0;
 
-  const layoutWidth =
-    Math.floor(puzzle.n / 5) <= 1
-      ? `max-w-xl`
-      : `max-w-${Math.floor(puzzle.n / 5)}xl`;
-
   return (
     <>
       <PuzzleContext.Provider
@@ -455,7 +450,7 @@ const Page = () => {
           setBrushMode,
         }}
       >
-        <div className={`relative ${layoutWidth} m-auto h-full`}>
+        <div className={`relative h-full`}>
           <div
             style={{
               transitionDelay: `${wonTransitionDelay.toString()}ms`,

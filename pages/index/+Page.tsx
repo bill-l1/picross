@@ -78,8 +78,6 @@ const Tile = ({
   const isMarked = board.status[index] === Status.MARKED;
   const row = Math.floor(index / puzzle.n);
   const col = index % puzzle.n;
-  // const border = won ? "" : "border border-slate-500";
-  const border = "";
 
   const [test, setTest] = useState("opacity-0");
 
@@ -89,7 +87,7 @@ const Tile = ({
 
   return (
     <div
-      className={`relative flex flex-1 select-none items-center justify-center transition ${isActive ? (won ? "bg-slate-50" : "bg-slate-100") : won ? "bg-slate-900" : "bg-slate-600"} ${border}`}
+      className={`relative flex flex-1 select-none items-center justify-center transition ${isActive ? (won ? "bg-slate-50" : "bg-slate-100") : won ? "bg-slate-900" : "bg-slate-600"}`}
       onMouseDown={onMouseDown}
       onMouseOver={onMouseOver}
     >
@@ -108,13 +106,13 @@ const Tile = ({
         style={{
           transitionDelay: `${(row * 15).toString()}ms`,
         }}
-        className={`absolute top-0 left-0 bottom-0 right-0 transition ${test} ${row > 0 ? "border-t" : ""} ${!(row % 5) ? "border-t-yellow-500 z-10" : "border-t-slate-500"}`}
+        className={`absolute top-0 left-0 bottom-0 right-0 transition ${won ? "opacity-0" : test} ${row > 0 ? "border-t" : ""} ${!(row % 5) ? "border-t-yellow-500 z-10" : "border-t-slate-500"}`}
       ></div>
       <div
         style={{
           transitionDelay: `${(col * 15).toString()}ms`,
         }}
-        className={`absolute top-0 left-0 bottom-0 right-0 transition ${test} ${col > 0 ? "border-l" : ""} ${!(col % 5) ? "border-l-yellow-500 z-10" : "border-l-slate-500"}`}
+        className={`absolute top-0 left-0 bottom-0 right-0 transition ${won ? "opacity-0" : test} ${col > 0 ? "border-l" : ""} ${!(col % 5) ? "border-l-yellow-500 z-10" : "border-l-slate-500"}`}
       ></div>
     </div>
   );
